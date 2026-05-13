@@ -1,7 +1,29 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: Arial, sans-serif;
+  padding: 20px;
+}
+
+.section-3 {
+  width: 100%;
+  max-width: 1400px;
+  margin: auto;
+  padding: 30px;
+  box-sizing: border-box;
+}
+.table-container {
+  width: 100%;
+  overflow-x: auto;
+  margin-top: 25px;
+}
 table {
   border-collapse: collapse;
   width: 100%;
-  max-width: 1000px;
+  max-width: 700px;
   margin: auto;
   background: #fff;
   border-radius: 8px;
@@ -28,4 +50,92 @@ th {
 
 .group {
   border: none;
+}
+/* tablet screen */
+
+@media (max-width: 1024px) {
+  body {
+    padding: 15px;
+  }
+
+  .section-3 {
+    padding: 25px;
+  }
+
+  .section-3 h3 {
+    font-size: 28px;
+  }
+
+  .section-3 p {
+    font-size: 15px;
+  }
+  th,
+  td {
+    padding: 10px;
+    font-size: 14px;
+  }
+
+  table {
+    min-width: 700px;
+  }
+}
+
+/* mobile screen */
+@media (max-width: 768px) {
+  body {
+    padding: 10px;
+  }
+
+  .section-3 {
+    padding: 15px;
+  }
+
+  .section-3 h3 {
+    font-size: 22px;
+    line-height: 1.4;
+  }
+
+  .section-3 p {
+    font-size: 14px;
+    list-style: none;
+  }
+
+  th,
+  td {
+    padding: 8px;
+    font-size: 12px;
+  }
+
+  table {
+    min-width: 600px;
+  }
+}
+
+/* laptop screen */
+@media (min-width: 1025px) and (max-width: 1200px) {
+  body {
+    padding: 20px;
+  }
+
+  .section-3 {
+    padding: 30px;
+  }
+
+  .section-3 h3 {
+    font-size: 32px;
+  }
+
+  .section-3 p {
+    font-size: 16px;
+  }
+
+  th,
+  td {
+    padding: 12px;
+    font-size: 14px;
+  }
+
+  table {
+    min-width: 800px;
+  }
 }
