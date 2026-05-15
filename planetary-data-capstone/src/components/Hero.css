@@ -1,0 +1,143 @@
+/* Restricts the logo height so it fits nicely in the navbar */
+.logo-image {
+  height: 45px; /* Increase or decrease this number to scale your logo */
+  width: auto;
+  object-fit: contain;
+}
+
+/* Main wrapper: side-by-side layout */
+.hero-container {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  height: 100vh;
+  background-color: #06174b; /* Deep navy background from mockup */
+  color: white;
+  overflow: hidden;
+}
+
+/* --- LEFT COLUMN: TEXT & LOGO --- */
+.hero-left {
+  flex: 1; /* Takes up exactly half the screen */
+  display: flex;
+  flex-direction: column;
+  padding: 40px 8%; 
+  border-right: none; /* No dashed line */
+}
+
+/* Adjust navbar to sit perfectly at the top left */
+.navbar {
+  padding: 0;
+  margin-bottom: auto; /* Pushes the text area down to the middle */
+}
+
+.logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+/* Text alignment */
+.hero-text-area {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  text-align: left;
+  margin-bottom: auto; /* Centers it vertically along with the top margin */
+}
+
+.hero-text-area h1 {
+  font-size: 3.5rem;
+  margin-bottom: 20px;
+  line-height: 1.2;
+}
+
+.hero-text-area p {
+  font-size: 1.1rem;
+  margin-bottom: 40px;
+  line-height: 1.6;
+  max-width: 95%;
+  color: #cbd5e1; /* Slightly muted text for better contrast */
+}
+
+/* --- BUTTONS --- */
+.hero-buttons {
+  display: flex;
+  gap: 15px;
+}
+
+button {
+  padding: 12px 24px;
+  font-size: 1rem;
+  border-radius: 8px; /* Softer rounded corners */
+  cursor: pointer;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.btn-primary {
+  background-color: #1d4ed8; /* Specific blue from the mockup */
+  color: white;
+  border: none;
+}
+
+.btn-primary:hover {
+  background-color: #1e40af;
+}
+
+.btn-secondary {
+  background-color: transparent;
+  color: white;
+  border: 1px solid #475569; /* Subtle border matching the mockup */
+}
+
+.btn-secondary:hover {
+  border-color: white;
+}
+
+/* --- RIGHT COLUMN: PLANET/VIDEO --- */
+.hero-right {
+  flex: 1; /* Takes up the other half */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+}
+
+.hero-media {
+  width: 100%; /* Increased slightly to fill the space better */
+  max-width: 650px;
+  scale: 1.05; /* Slightly enlarges the media for a more impactful look */
+  
+  /* 1. This makes the black/dark background of your JPEG vanish! */
+  mix-blend-mode: screen; 
+  
+  /* 2. Applies the glow tightly around the bright pixels of the planet */
+  filter: drop-shadow(0 0 50px rgba(10, 37, 112, 0.6)); 
+}
+
+/* --- MOBILE RESPONSIVENESS --- */
+@media (max-width: 992px) {
+  .hero-container {
+    flex-direction: column; /* Stacks left on top of right */
+    height: auto;
+    min-height: 100vh;
+  }
+  
+  .hero-left {
+    border-right: none;
+    padding: 40px 5%;
+  }
+
+  .hero-text-area {
+    margin-top: 60px; /* Gives space below the logo on mobile */
+  }
+
+  .hero-text-area h1 {
+    font-size: 2.8rem;
+  }
+
+  .hero-right {
+    padding: 20px;
+    margin-bottom: 40px;
+  }
+}
