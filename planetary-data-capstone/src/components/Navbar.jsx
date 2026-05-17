@@ -1,13 +1,14 @@
-import React from 'react';
-// 1. Import your logo from the assets folder. (Check your file extension!)
-import myLogo from '../assets/logo.png'; 
-import './Hero.css';
+import "./Navbar.css";
+import planetLogo from "../assets/logo.png";
 
 const Navbar = () => {
   return (
     <nav className="navbar">
-      {/* 2. Replace the text div with an img tag using the imported variable */}
-      <img src={myLogo} alt="Planet Creative World" className="logo-image" />
+      <img
+        src={planetLogo}
+        alt="Planet Creative World"
+        className="navbar__logo"
+      />
     </nav>
   );
 };

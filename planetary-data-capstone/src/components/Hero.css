@@ -1,143 +1,147 @@
-/* Restricts the logo height so it fits nicely in the navbar */
-.logo-image {
-  height: 45px; /* Increase or decrease this number to scale your logo */
-  width: auto;
-  object-fit: contain;
-}
-
-/* Main wrapper: side-by-side layout */
-.hero-container {
+.hero {
   display: flex;
-  flex-direction: row;
-  width: 100%;
-  height: 100vh;
-  background-color: #06174b; /* Deep navy background from mockup */
+  align-items: center;
+  justify-content: center;
+
+  gap: 6rem;
+
+  padding: 5rem 6rem;
+  padding-top: 8rem; /* accounts for fixed navbar */
+
+  background-color: #051540;
   color: white;
-  overflow: hidden;
+
+  width: 100%;
 }
 
-/* --- LEFT COLUMN: TEXT & LOGO --- */
-.hero-left {
-  flex: 1; /* Takes up exactly half the screen */
-  display: flex;
-  flex-direction: column;
-  padding: 40px 8%; 
-  border-right: none; /* No dashed line */
+.hero-image img {
+  width: 520px;
+  border-radius: 50%;
 }
 
-/* Adjust navbar to sit perfectly at the top left */
-.navbar {
-  padding: 0;
-  margin-bottom: auto; /* Pushes the text area down to the middle */
-}
-
-.logo {
-  font-size: 1.5rem;
-  font-weight: bold;
-}
-
-/* Text alignment */
-.hero-text-area {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
+.hero-text {
+  max-width: 500px;
   text-align: left;
-  margin-bottom: auto; /* Centers it vertically along with the top margin */
 }
 
-.hero-text-area h1 {
-  font-size: 3.5rem;
-  margin-bottom: 20px;
-  line-height: 1.2;
+.hero-text h1 {
+  font-size: 64px;
+  line-height: 110%;
+  font-weight: 700;
+
+  margin-bottom: 1.5rem;
 }
 
-.hero-text-area p {
-  font-size: 1.1rem;
-  margin-bottom: 40px;
-  line-height: 1.6;
-  max-width: 95%;
-  color: #cbd5e1; /* Slightly muted text for better contrast */
+.hero-text p {
+  font-size: 18px;
+  line-height: 170%;
+  color: #d6d6d6;
+
+  margin-bottom: 2rem;
 }
 
-/* --- BUTTONS --- */
 .hero-buttons {
   display: flex;
-  gap: 15px;
+  gap: 1rem;
 }
 
-button {
-  padding: 12px 24px;
-  font-size: 1rem;
-  border-radius: 8px; /* Softer rounded corners */
-  cursor: pointer;
+.btn-primary,
+.btn-secondary {
+  color: white;
+  min-width: 160px;
+  height: 44px;
+  border-radius: 8px;
+  padding: 10px 20px;
+  font-size: 16px;
   font-weight: 600;
-  transition: all 0.3s ease;
+  line-height: 24px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  white-space: nowrap;
+  text-decoration: none;
+  display: inline-flex;
 }
 
 .btn-primary {
-  background-color: #1d4ed8; /* Specific blue from the mockup */
-  color: white;
+  background-color: #164baf;
   border: none;
+  transition:
+    background-color 0.3s ease,
+    transform 0.2s ease,
+    box-shadow 0.3s ease;
 }
 
 .btn-primary:hover {
-  background-color: #1e40af;
+  background-color: #1d5ad1;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(22, 75, 175, 0.35);
 }
 
 .btn-secondary {
   background-color: transparent;
-  color: white;
-  border: 1px solid #475569; /* Subtle border matching the mockup */
+  border: 1px solid white;
+  white-space: nowrap;
+  transition:
+    background-color 0.3s ease,
+    transform 0.2s ease,
+    border-color 0.3s ease,
+    box-shadow 0.3s ease;
 }
 
 .btn-secondary:hover {
-  border-color: white;
+  background-color: rgba(255, 255, 255, 0.08);
+
+  transform: translateY(-2px);
+
+  box-shadow: 0 8px 20px rgba(255, 255, 255, 0.08);
 }
 
-/* --- RIGHT COLUMN: PLANET/VIDEO --- */
-.hero-right {
-  flex: 1; /* Takes up the other half */
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 10px;
+.btn-secondary:active {
+  transform: translateY(0);
 }
 
-.hero-media {
-  width: 100%; /* Increased slightly to fill the space better */
-  max-width: 650px;
-  scale: 1.05; /* Slightly enlarges the media for a more impactful look */
-  
-  /* 1. This makes the black/dark background of your JPEG vanish! */
-  mix-blend-mode: screen; 
-  
-  /* 2. Applies the glow tightly around the bright pixels of the planet */
-  filter: drop-shadow(0 0 50px rgba(10, 37, 112, 0.6)); 
+@media (max-width: 1024px) {
+  .hero {
+    gap: 3rem;
+    padding: 6rem 3rem 4rem;
+  }
+
+  .hero-image img {
+    width: 380px;
+  }
+
+  .hero-text h1 {
+    font-size: 48px;
+  }
 }
 
-/* --- MOBILE RESPONSIVENESS --- */
-@media (max-width: 992px) {
-  .hero-container {
-    flex-direction: column; /* Stacks left on top of right */
-    height: auto;
-    min-height: 100vh;
-  }
-  
-  .hero-left {
-    border-right: none;
-    padding: 40px 5%;
+@media (max-width: 768px) {
+  .hero {
+    flex-direction: column-reverse;
+    text-align: center;
+    padding: 6rem 1.5rem 3rem;
+    gap: 2rem;
   }
 
-  .hero-text-area {
-    margin-top: 60px; /* Gives space below the logo on mobile */
+  .hero-image img {
+    width: 260px;
   }
 
-  .hero-text-area h1 {
-    font-size: 2.8rem;
+  .hero-text {
+    max-width: 100%;
   }
 
-  .hero-right {
-    padding: 20px;
-    margin-bottom: 40px;
+  .hero-text h1 {
+    font-size: 2rem;
+  }
+
+  .hero-text p {
+    font-size: 1rem;
+  }
+
+  .hero-buttons {
+    justify-content: center;
   }
 }

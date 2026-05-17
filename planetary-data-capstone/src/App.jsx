@@ -1,14 +1,29 @@
-import React from 'react';
-import HeroSection from './components/HeroSection'; // Ensure this path matches your folder
+/* function App() {
+  return <h1>Test</h1>;
+}
+
+export default App; */
+
+import Hero from "./components/Hero";
+import Navbar from "./components/Navbar";
+import VideoSection from "./components/VideoSection";
+import PlanetsGrid from "./components/PlanetsGrid";
+import PlanetCard from "./components/PlanetCard";
+import DataTable from "./components/DataTable";
+import ContactForm from "./components/ContactForm";
+
+import Footer from "./components/Footer";
 
 function App() {
   return (
     <>
-      <HeroSection />
-      
-      {/* Placeholders so the scroll buttons have a destination */}
-      <section id="planets-section" style={{ height: '100vh', background: '#111' }}></section>
-      <section id="contact-section" style={{ height: '100vh', background: '#222' }}></section>
+      <Navbar />
+      <Hero />
+      <VideoSection />
+      <PlanetsGrid />
+      <DataTable />
+      <ContactForm />
+      <Footer />
     </>
   );
 }
