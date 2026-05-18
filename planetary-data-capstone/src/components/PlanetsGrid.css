@@ -1,0 +1,53 @@
+.planets-section {
+  padding: 4rem 2rem;
+  background-color: #f0f4ff;
+  text-align: center;
+}
+
+.planets-title {
+  font-size: 1.6rem;
+  color: #1a2e6e;
+  margin-bottom: 0.8rem;
+}
+
+.planets-subtitle {
+  color: #555;
+  max-width: 600px;
+  margin: 0 auto 2.5rem;
+  line-height: 1.6;
+}
+
+.planets-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+@media (max-width: 1024px) {
+  .planets-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .planets-section {
+    padding: 3rem 1.5rem;
+  }
+
+  .planets-title {
+    font-size: 1.25rem;
+  }
+
+  .planets-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .planets-grid {
+    grid-template-columns: 1fr;
+  }
+}

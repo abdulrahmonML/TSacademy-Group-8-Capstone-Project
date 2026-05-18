@@ -1,0 +1,26 @@
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  padding: 1rem 6rem;
+  background-color: #051540;
+}
+
+.navbar__logo {
+  height: 40px; /* control size here */
+  width: auto; /* keeps the aspect ratio */
+}
+
+@media (max-width: 768px) {
+  .navbar {
+    padding: 0.75rem 1.5rem;
+  }
+
+  .navbar__logo {
+    height: 30px;
+  }
+}
