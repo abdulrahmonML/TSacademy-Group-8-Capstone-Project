@@ -2,7 +2,7 @@ function Table() {
   return (
     <>
       <div className="section-3">
-        <h3>Planetary Facts at a Glance</h3>
+        <h2>Planetary Facts at a Glance</h2>
 
         <p>
           Below is a comparative table of major planets in our solar system. The
