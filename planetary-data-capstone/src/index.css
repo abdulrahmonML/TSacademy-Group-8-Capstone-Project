@@ -1,105 +1,11 @@
-<<<<<<< HEAD
-=======
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap");
 
->>>>>>> main
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-<<<<<<< HEAD
-body {
-  font-family: Arial, sans-serif;
-  padding: 20px;
-  background: #fff;
-  color: #212121;
-}
-
-.section-3 {
-  width: 100%;
-  max-width: 1400px;
-  margin: auto;
-  padding: 30px;
-  box-sizing: border-box;
-}
-
-.section-3 h2 {
-  font-size: 34px;
-  font-weight: bold;
-  margin-bottom: 12px;
-  color: #1a56a0;
-}
-
-.section-3 p {
-  font-size: 16px;
-  color: #212121;
-  margin-bottom: 8px;
-  line-height: 1.5;
-}
-
-.table-container {
-  margin-top: 25px;
-  display: inline-block;
-  border-radius: 8px;
-  overflow: hidden;
-  border: 1px solid #c5d8f0;
-}
-
-table {
-  border-collapse: separate;
-  border-spacing: 0;
-  background: #f7f4f4;
-}
-
-th, td {
-  border: 1px solid #ffffff;
-  padding: 15px 15px;
-  text-align: center;
-  background-color: #eef5fc;
-  font-size: 10px;
-  margin: 4px;
-}
-
-thead th {
-  background-color: #0e41a9;
-  padding: 20px 20px;
-  color: white;
-  font-size: 14px;
-  border: 1px solid white;
-}
-
-.group, .subgroup {
-  background-color: #dce8f8;
-  font-weight: bold;
-  color: #212121;
-}
-
-/* ===== TABLET ===== */
-@media (max-width: 1024px) {
-  body { padding: 15px; }
-  .section-3 { padding: 25px; }
-  .section-3 h3 { font-size: 28px; }
-  th, td { padding: 7px 10px; font-size: 13px; }
-}
-
-/* ===== MOBILE ===== */
-@media (max-width: 768px) {
-  body { padding: 10px; }
-  .section-3 { padding: 15px; }
-  .section-3 h3 { font-size: 22px; }
-  th, td { padding: 6px 8px; font-size: 12px; }
-  .table-container { overflow-x: auto; width: 100%; }
-}
-
-/* ===== LAPTOP ===== */
-@media (min-width: 1025px) and (max-width: 1200px) {
-  body { padding: 20px; }
-  .section-3 { padding: 30px; }
-  .section-3 h3 { font-size: 32px; }
-  th, td { padding: 8px 14px; font-size: 14px; }
-=======
 html {
   scroll-behavior: smooth;
 }
@@ -114,5 +20,4 @@ body {
   margin: 0;
   padding: 0;
   font-family: "Inter", sans-serif;
->>>>>>> main
 }
